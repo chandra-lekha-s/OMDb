@@ -60,26 +60,22 @@ const Search = () => {
       />
       {movies.length > 0 ? (
         <div
-          className="movie-list overflow-auto"
-          style={{ height: "500px", width: "500px", zIndex: 2 }}
+          className="movie-list overflow-auto position-absolute  "
+          style={{
+            height: "500px",
+            width: "500px",
+          }}
         >
+          {/* <div
+            className="container "
+            style={{ backgroundColor: "white", zIndex: "2" }}
+          > */}
           {movies.length > 0
             ? movies.map((movie) => (
-                //   <div className="movie-card" key={movie.imdbID}>
-                //     <img
-                //       src={movie.Poster}
-                //       alt={movie.Title}
-                //       width={50}
-                //       className="movie-poster"
-                //     />
-
-                //     <div className="movie-details">
-                //       <h3 className="movie-title">{movie.Title}</h3>
-
-                //       <p className="movie-release-date">{movie.Year}</p>
-                //     </div>
-                //   </div>
-                <div className="card mb-2 bg-dark px-3 py-2">
+                <div
+                  className="card mb-2 bg-dark p-2"
+                  style={{ zIndex: "1", boxShadow: "0px 10px 10px #000" }}
+                >
                   <div className="row g-0">
                     <div className="col-md-2">
                       <img
@@ -92,7 +88,7 @@ const Search = () => {
                     <div className="col-md-10 =">
                       <div className="card-body">
                         <p className="card-text text-light text-start">
-                          {movie.Title} <br />
+                          <b>{movie.Title}</b> <br />
                           {movie.Year}
                         </p>
                       </div>
@@ -107,6 +103,7 @@ const Search = () => {
               )}
         </div>
       ) : (
+        // </div>
         <></>
       )}
     </div>

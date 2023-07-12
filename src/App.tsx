@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <MovieCarousel setLimit={6} />
+      <MovieCarousel setLimit={5} />
       <NewCard category="upcoming" title="Up coming" scrollType="horizontal" />
       <NewCard category="popular" title="Popular" scrollType="horizontal" />
       <NewCard category="top_rated" title="Top Rated" scrollType="vertical" />
